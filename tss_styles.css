@@ -13,7 +13,11 @@
 
 */
 
-
+@font-face {
+   font-family: Quicksand;
+   src:url('Quicksand-Regular.otf') format('truetype')
+      url('Quicksand-Regular.woff') format('woff');
+}
 
 /* HTML and Body Styles */
 html {
@@ -39,13 +43,31 @@ h2 {
 }
 
 h1, h2 {
-   border-radius: 3px;
+   border-radius: 5px;
    box-shadow: 2px 2px 7px black;
+   letter-spacing: 0.1em;
 }
 
 article #about_tss h1 {   
    color:white;
    background-color: rgb(222,128,60)
+}
+
+article.syllabus h1, article.syllabus h2 {
+   color:rgb(255, 286, 255);
+   background-color: rgb(255, 286, 255);
+}
+
+article.syllabus ol {
+   list-style-type:upper-roman;
+}
+
+article.syllabus ol ol{
+   list-style-type:upper-roman;
+}
+
+article.syllabus ol ol ol {
+   list-style-type:upper-roman;
 }
 
 article #about_tss h2 {   
@@ -59,19 +81,46 @@ aside blockquote {
    color:rgb(232,165,116);
 }
 
+/* Pseudo-Elements */
+
+aside blockquote::before{
+   content:open-quote;
+   font-size: 1.2em;
+}
+
+aside blockquote::after{
+   content:close-quote;
+   font-size: 1.2em;
+}
+
+aisde {
+   font-size: 0.8em;
+}
 
 
 /* Navigation Styles */	
 
+nav {
+   font-size: 0.8em;
+}
 
-
-
+nav > ul {
+   line-height: 2em;
+   /* text-decoration: none; */
+}
 
 /* List Styles */
+article#about_tss ul li:nth-child(1) {
+   list-style-image: url(runicon.png);
+}
 
+article#about_tss ul li:nth-child(2) {
+   list-style-image: url(bikeicon.png);
+}
 
-
-
+article#about_tss ul li:nth-child(3) {
+   list-style-image: url(swimicon.png);
+}
 
 /* Footer Styles */
 
